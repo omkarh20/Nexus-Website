@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { nodeTypes, nodes, edges } from './assets/assets.jsx';
 import bgImage from './assets/bg.jpg';
-import ReactFlow from 'reactflow';
+import logo from './assets/nexus.ico'
+import {ReactFlow, Handle} from 'reactflow';
 import 'reactflow/dist/style.css';
+import DomainDetails from './DomainDetails.jsx';
 
 function App() {
   const words = ["Web Dev", "App Dev", "AIML"];
@@ -11,20 +14,7 @@ function App() {
   const [isAdding, setIsAdding] = useState(true);
   const [letterIndex, setLetterIndex] = useState(0);
 
-  const nodes = [
-    { id: '1', type: 'input', data: { label: 'Node 1' }, position: { x: 250, y: 5 } },
-    { id: '2', data: { label: 'Node 2' }, position: { x: 100, y: 100 } },
-    { id: '3', data: { label: 'Node 3' }, position: { x: 400, y: 100 } },
-    { id: '4', data: { label: 'Node 4' }, position: { x: 400, y: 200 } },
-    { id: '5', data: { label: 'Node 5' }, position: { x: 100, y: 200 } },
-  ];
-
-  const edges = [
-    { id: 'e1-2', source: '1', target: '2', type: 'smoothstep' },
-    { id: 'e1-3', source: '1', target: '3', type: 'smoothstep' },
-    { id: 'e2-5', source: '2', target: '5', type: 'smoothstep' },
-    { id: 'e3-4', source: '3', target: '4', type: 'smoothstep' },
-  ];
+  const [selectedNode, setSelectedNode] = useState('1');
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,14 +42,14 @@ function App() {
   return (
     <div className="app">
       <nav className="navbar">
-        <div className="logo">Nexus</div>
+        <img src={logo} alt="" className='logo'/>
         <ul className="nav-links">
           <li>Home</li>
           <li>About</li>
           <li>Contact Us</li>
         </ul>
       </nav>
-      
+
       <header className="header">
         <img src={bgImage} alt="Background" className="background-image" />
         <div className="header-content">
@@ -70,20 +60,22 @@ function App() {
           <button className="register-btn">Register</button>
         </div>
       </header>
+
+      <DomainDetails selectedNode={selectedNode} />
+
       <div className="flowchart-container" style={{ height: 400 }}>
         <ReactFlow 
           nodes={nodes} 
           edges={edges} 
           fitView
+          nodeTypes={nodeTypes}
           zoomOnScroll={false}
           preventScrolling={false}
+          onNodeClick={(event, node) => setSelectedNode(node.id)}
+          className="react-flow-container"
         />
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <img src={bgImage} alt="" />
+      
     </div>
   );
 }

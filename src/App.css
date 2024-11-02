@@ -18,6 +18,10 @@ body {
 
 .app {
   color: white;
+  background: linear-gradient(125deg,
+  var(--dark-blue) 0%,
+  var(--blue-medium) 40%,
+  var(--pink) 100%);
 }
 
 .navbar {
@@ -29,8 +33,7 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  width: 4%;
 }
 
 .nav-links {
@@ -52,6 +55,7 @@ body {
   position: relative;
   text-align: center;
   padding: 5rem 1rem;
+  z-index: 1;
 }
 
 .background-image {
@@ -61,7 +65,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.9;
+  opacity: 1;
   z-index: -1;
 }
 
@@ -82,7 +86,7 @@ body {
 }
 
 .dynamic-text {
-  color: var(--dark-blue);
+  color: var(--cyan-light);
   font-weight: bold;
 }
 
@@ -100,4 +104,60 @@ body {
 
 .register-btn:hover {
   background-color: var(--cyan-dark);
+}
+
+.flowchart-container{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.react-flow-container {
+  cursor: default !important;
+}
+
+.react-flow__node {
+  cursor: pointer !important;
+}
+
+.react-flow__pane {
+  cursor: default !important;
+}
+
+.custom-node {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: var(--dark-blue);
+}
+
+.node-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.node-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.node-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(3, 4, 94, 0.8);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.react-flow__handle {
+  background: var(--cyan-medium);
+  width: 8px;
+  height: 8px;
 }
