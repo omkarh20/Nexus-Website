@@ -1,0 +1,103 @@
+:root {
+  --dark-blue: #03045e;
+  --blue-dark: #023e8a;
+  --blue-medium: #0077b6;
+  --blue-light: #0096c7;
+  --cyan-dark: #00b4d8;
+  --cyan-medium: #48cae4;
+  --cyan-light: #90e0ef;
+  --cyan-lighter: #ade8f4;
+  --cyan-lightest: #caf0f8;
+  --pink: #f72585;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue);
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links li:hover {
+  color: var(--cyan-medium);
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.header-content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: var(--cyan-lightest);
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  color: var(--pink);
+}
+
+.dynamic-text {
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+.register-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--pink);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+  background-color: var(--cyan-dark);
+}
