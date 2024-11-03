@@ -1,8 +1,41 @@
-# React + Vite
+# Nexus Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+A basic website built in React for Nexus Club at PES University.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Dynamic homepage
+- Interactive club information and domain overview
+- A Timeline of upcoming events
+
+## Preview
+
+![Nexus Homepage](public/page-screenshot.png)
+
+## Technologies Used
+
+- Frontend Framework: React
+- Tree structure for Domains: React-Flow
+- Build Tool: Vite
+
+## Setup and Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/omkarh20/Nexus-Website.git
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Run development server
+
+```bash
+npm run dev
+```
