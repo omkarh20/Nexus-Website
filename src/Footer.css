@@ -1,0 +1,111 @@
+.footer {
+    background: linear-gradient(to bottom, var(--blue-dark), var(--dark-blue));
+    color: var(--cyan-lighter);
+    padding: 4rem 2rem 1rem;
+    margin-top: 4rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-section img{
+    width: 50%;
+    margin-top: 30px;
+  }
+
+  .footer-section h3 {
+    color: var(--cyan-light);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  
+  .footer-section p {
+    color: var(--cyan-medium);
+    line-height: 1.6;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-section ul li a,
+  .footer-section ul li span {
+    color: var(--cyan-medium);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .footer-section ul li a:hover {
+    color: var(--cyan-light);
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    color: var(--cyan-medium);
+    transition: color 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-links a:hover {
+    color: var(--cyan-light);
+    transform: translateY(-2px);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid rgba(144, 224, 239, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .copyright {
+    color: var(--cyan-medium);
+    font-size: 0.875rem;
+  }
+  
+  .bottom-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .bottom-links a {
+    color: var(--cyan-medium);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+  
+  .bottom-links a:hover {
+    color: var(--cyan-light);
+  }

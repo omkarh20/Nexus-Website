@@ -3,9 +3,11 @@ import './App.css';
 import { nodeTypes, nodes, edges } from './assets/assets.jsx';
 import bgImage from './assets/bg.jpg';
 import logo from './assets/nexus.ico'
-import {ReactFlow, Handle} from 'reactflow';
+import {ReactFlow} from 'reactflow';
 import 'reactflow/dist/style.css';
 import DomainDetails from './DomainDetails.jsx';
+import Timeline from './Timeline.jsx';
+import Footer from './Footer.jsx';
 
 function App() {
   const words = ["Web Dev", "App Dev", "AIML"];
@@ -63,7 +65,7 @@ function App() {
 
       <DomainDetails selectedNode={selectedNode} />
 
-      <div className="flowchart-container" style={{ height: 400 }}>
+      <div className="flowchart-container" >
         <ReactFlow 
           nodes={nodes} 
           edges={edges} 
@@ -75,7 +77,13 @@ function App() {
           className="react-flow-container"
         />
       </div>
-      
+
+      <hr/>
+
+      <Timeline />
+
+      <Footer />
+
     </div>
   );
 }

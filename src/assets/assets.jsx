@@ -114,15 +114,17 @@ export const CustomNode = ({ data }) => (
   ];
 
 export  const edges = [
-    // Connect root to main branches
-    { id: 'e1-2', source: '1', target: '2', type: 'smoothstep' },
-    { id: 'e1-3', source: '1', target: '3', type: 'smoothstep' },
-    // Connect Technical branch to children
-    { id: 'e2-4', source: '2', target: '4', type: 'smoothstep' },
-    { id: 'e2-5', source: '2', target: '5', type: 'smoothstep' },
-    { id: 'e2-6', source: '2', target: '6', type: 'smoothstep' },
-    // Connect Non-Technical branch to children
-    { id: 'e3-7', source: '3', target: '7', type: 'smoothstep' },
-    { id: 'e3-8', source: '3', target: '8', type: 'smoothstep' },
-    { id: 'e3-9', source: '3', target: '9', type: 'smoothstep' },
+    //connect root to main branches
+    { id: 'e1-2', source: '1', target: '2', type: 'default' },
+    { id: 'e1-3', source: '1', target: '3', type: 'default' },
+
+    //connect technical branch to children
+    { id: 'e2-4', source: '2', target: '4', type: 'default' },
+    { id: 'e2-5', source: '2', target: '5', type: 'default' },
+    { id: 'e2-6', source: '2', target: '6', type: 'default' },
+    
+    //connect non technical branch to children
+    { id: 'e3-7', source: '3', target: '7', type: 'default' },
+    { id: 'e3-8', source: '3', target: '8', type: 'default' },
+    { id: 'e3-9', source: '3', target: '9', type: 'default' },
   ];
